@@ -33,7 +33,10 @@ def flatten(to_be_flattened):
     return result
 
 def remove_duplicates(to_be_cleaned):
-    return list(dict.fromkeys(to_be_cleaned))
+    returned_list = []
+    for item in to_be_cleaned: 
+        if item not in to_be_cleaned: 
+            returned_list.append(item)
         
 def find_factors(num, factors = []): 
     if is_prime(num): 
